@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.jdom2.*;
+import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
 
@@ -38,7 +39,8 @@ public class BookXML {
             book.addContent(year);
             root.addContent(book);
         }
-        XMLOutputter outputter = new XMLOutputter();
+        Format fmt = Format.getPrettyFormat();
+        XMLOutputter outputter = new XMLOutputter(fmt);
 
         try (FileOutputStream fs = new FileOutputStream("war and peace3.xml")) {
             outputter.output(document, fs);

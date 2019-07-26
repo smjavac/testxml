@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root><book><name>Война и мир</name><year>1983</year></book><book><name>Архипелаг ГУЛАГ</name><year>1989</year></book></root>
+<root>
+  <book>
+    <name>Война и мир</name>
+    <year>1983</year>
+  </book>
+  <book>
+    <name>Архипелаг ГУЛАГ</name>
+    <year>1989</year>
+  </book>
+</root>
