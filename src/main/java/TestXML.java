@@ -13,6 +13,7 @@ public class TestXML {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, XMLStreamException, TransformerException {
         XMLOutputFactory factory = XMLOutputFactory.newFactory();
         XMLStreamWriter writer = factory.createXMLStreamWriter(new FileOutputStream("war and peace.xml"));
+
         try {
             writer.writeStartDocument("UTF-8", "1.0");
 
@@ -39,6 +40,8 @@ public class TestXML {
             writer.writeStartElement("year");
             writer.writeCharacters("1989");
             writer.writeEndElement(); //year
+
+
 
             writer.writeEndElement(); // book2
             writer.writeEndElement();  //root
