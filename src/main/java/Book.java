@@ -1,17 +1,21 @@
-public class Book {
-    String title;
+import org.jdom2.Element;
 
-    public int getYear() {
+public class Book extends Element{
+    String name;
+    String year;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public Book(String name, String year){
+        this.name = name;
         this.year = year;
     }
 
-    int year;
-    public Book(){}
-    public void setTitle(String title) { this.title = title;}
-    public String getTitle() { return title; }
 
 }
