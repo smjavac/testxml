@@ -1,17 +1,17 @@
 
 
 import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.thoughtworks.xstream.XStream;
 
 
 public class BookXML {
 
     public static void main(String[] args) {
-        List<Book> bookList = new ArrayList<Book>();
+        List<Book> bookList = new ArrayList<>();
         Book book = new Book();
         book.setTitle("Война и мир");
         book.setYear(1983);
@@ -24,7 +24,6 @@ public class BookXML {
         XStream xs = new XStream();
 
         try (FileOutputStream fs = new FileOutputStream("war and peace2.xml")) {
-
             xs.toXML(bookList, fs);
         } catch (IOException ex) {
             ex.getMessage();
