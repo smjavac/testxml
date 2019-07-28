@@ -19,7 +19,7 @@ public class ReadXML {
         SAXBuilder parser = new SAXBuilder();
         Document xmlDoc;
         try {
-            xmlDoc = parser.build(new File("war and peace.xml"));
+            xmlDoc = parser.build(new File("Books.xml"));
             System.out.println("Books:");
 
             // Получаем список всех элементов book, которые

@@ -42,7 +42,7 @@ public class BookXML {
         Format fmt = Format.getPrettyFormat();
         XMLOutputter outputter = new XMLOutputter(fmt);
 
-        try (FileOutputStream fs = new FileOutputStream("war and peac4e.xml")) {
+        try (FileOutputStream fs = new FileOutputStream("Books.xml")) {
             outputter.output(document, fs);
 
         }  catch (IOException e) {
