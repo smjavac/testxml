@@ -1,13 +1,14 @@
 import org.jdom2.Element;
 
-public class Cars extends Element {
-  private   String name;
-  private   String year;
-  private   String body;
-  private   String engine;
-  private   String transmission;
+public class Cars {
+    private String name;
+    private String year;
+    private String body;
+    private String engine;
+    private String transmission;
 
-    public Cars(String name, String year, String body, String engine, String transmission) {
+    public Cars(String name, String year, String body,
+                String engine, String transmission) {
         this.year = year;
         this.name = name;
         this.body = body;
