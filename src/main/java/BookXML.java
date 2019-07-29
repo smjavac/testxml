@@ -12,15 +12,23 @@ import org.jdom2.output.XMLOutputter;
 public class BookXML {
 
     public static void main(String[] args) {
-        List<Book> bookList = new ArrayList<>();
-        Book mybook1 = new Book("Война и мир", "1983");
-        Book mybook2 = new Book("Архипелаг ГУЛАГ", "1989");
-        bookList.add(mybook1);
-        bookList.add(mybook2);
+        List<Cars> carsList = new ArrayList<>();
+        Cars car1 = new Cars("Mercedes-Benz", "2011", "sedan", "V8", "automatic");
+        Cars car2 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        Cars car3 = new Cars("Porsche", "2016", "sedan", "V6", "automatic");
+        Cars car4 = new Cars("", "2015", "sedan", "V6", "automatic");
+        Cars car5 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        Cars car6 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        Cars car7 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        Cars car8 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        Cars car9 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        Cars car10 = new Cars("BMW", "2015", "sedan", "V6", "automatic");
+        carsList.add(car1);
+        carsList.add(car2);
 //        XStream xs = new XStream();
 //
 //        try (FileOutputStream fs = new FileOutputStream("war and peace2.xml")) {
-//            xs.toXML(bookList, fs);
+//            xs.toXML(carsList, fs);
 //        } catch (IOException ex) {
 //            ex.getMessage();
 //        }
@@ -29,7 +37,7 @@ public class BookXML {
         Element root = new Element("root");
 
         document.setRootElement(root);
-        for (Book b: bookList) {
+        for (Cars b: carsList) {
             Element book = new Element("book");
             Element name = new Element("name");
             name.addContent(b.getName());
