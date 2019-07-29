@@ -22,14 +22,13 @@ public class ReadXML {
             xmlDoc = parser.build(new File("Cars.xml"));
             System.out.println("Cars:");
 
-            // Получаем список всех элементов book, которые
+            // Получаем список всех элементов car, которые
             // содержит корневой элемент
             List elements = xmlDoc.getRootElement()
                     .getContent(new ElementFilter("car"));
 
-            // Для каждого элемента head получаем значение атрибута
-            // id и текст вложенных элементов name и department
-            Iterator iterator = elements.iterator();
+            // Для каждого элемента car получаем вложенные элементы
+                       Iterator iterator = elements.iterator();
             while (iterator.hasNext()) {
                 Element car = (Element) iterator.next();
                 String name = car.getChildText("name");
